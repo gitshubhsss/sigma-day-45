@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    padding-top: 4rem;
+}
+
+button{
+    height: 2rem;
+    width: 200px;
+    cursor: pointer;
+}
+.box{
+    width: 50%;
+    border: 2px solid black;
+    height: 10rem;
+    margin: 2rem auto;
+}
