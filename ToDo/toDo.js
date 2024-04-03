@@ -1,15 +1,28 @@
 let inp=document.querySelector('input');
 let ul=document.querySelector('ul');
-let btn=document.querySelector('button');
-let del=document.querySelector('.delete');
-let tasks=document.createElement('li');
+let btn=document.querySelector('.addBtn');
 let delBtn=document.createElement('button')
-
+let p=document.querySelector(".addTask")
 btn.addEventListener("click",function(){
-    delBtn.innerText="delete";
-    tasks.innerText=inp.value;
-    ul.appendChild(tasks)
-    tasks.appendChild(delBtn)
+    p.innerText=" ";
+    let li=document.createElement('li');
+    li.innerText=inp.value;
+    let del=document.createElement('button');
+    del.innerText="delete";
+    li.appendChild(del)
+    ul.appendChild(li)
     inp.value="";
 })
+
+
+ul.addEventListener("click",(event)=>{
+   if(event.target.nodeName=="BUTTON"){
+        event.target.parentElement.remove();
+   }
+   if(ul.firstElementChild==null){
+   p.innerText="add some task";
+}
+
+})
+
 
